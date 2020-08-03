@@ -13,14 +13,11 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 " === Language ===
+Plug 'sheerun/vim-polyglot'
+
 " Elm
 Plug 'antew/vim-elm-language-server'
 Plug 'antew/vim-elm-analyse'
-Plug 'andys8/vim-elm-syntax'
-Plug 'elm-tooling/elm-vim'
-
-" Javascript
-Plug 'pangloss/vim-javascript'
 
 " === Utility ===
 " Git
@@ -37,7 +34,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'dense-analysis/ale'
 
 " === Color scheme ===
 Plug 'tomasr/molokai'
@@ -168,9 +166,7 @@ let g:airline_powerline_fonts = 1
 ""let g:syntastic_php_checkers = ['php']
 "let g:syntastic_php_phpcs_args='--standard=Security -n'
 
-"""""""""""""""""""""""
-" ALE
-"""""""""""""""""""""""
+"=== ALE
 "let g:ale_php_phpcs_standard = 'PSR2'
 "let g:ale_open_list = 1
 "let g:ale_set_quickfix = 1
