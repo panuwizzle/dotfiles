@@ -21,7 +21,6 @@ Plug 'antew/vim-elm-analyse'
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf'
 Plug 'majutsushi/tagbar'
