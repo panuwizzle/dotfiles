@@ -21,8 +21,13 @@ Plug 'antew/vim-elm-analyse'
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'dense-analysis/ale'
+Plug 'junegunn/fzf'
+Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
-Plug 'mattn/webapi-vim'
+"Plug 'mattn/webapi-vim'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -30,10 +35,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'majutsushi/tagbar'
-Plug 'junegunn/fzf'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'dense-analysis/ale'
 
 " === Color scheme ===
 Plug 'tomasr/molokai'
