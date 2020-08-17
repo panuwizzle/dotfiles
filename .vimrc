@@ -118,6 +118,7 @@ set wildmenu
 " UI
 """"""""""""""""""""""
 set termguicolors
+set background=dark
 "colorscheme dracula
 colorscheme nord
 "colorscheme snazzy
