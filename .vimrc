@@ -13,6 +13,9 @@ call plug#begin('~/.vim/plugged')
 " === Language ===
 Plug 'sheerun/vim-polyglot'
 
+" Typescript
+Plug 'leafgarland/typescript-vim'
+
 " Elm
 Plug 'antew/vim-elm-language-server'
 Plug 'antew/vim-elm-analyse'
@@ -53,7 +56,8 @@ set hlsearch
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
 " if js needs 2 spaces
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype json       setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype yaml       setlocal ts=2 sts=2 sw=2 expandtab
 
 set si
 syntax enable
