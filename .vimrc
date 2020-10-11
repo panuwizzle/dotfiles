@@ -170,6 +170,14 @@ let g:airline_powerline_fonts = 1
 "let g:syntastic_php_phpcs_args='--standard=Security -n'
 
 "=== ALE
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+
+" Javascript
+let g:ale_linters = { 'javascript': ['standard'], }
+let g:ale_fixers = { 'javascript': ['standard'], }
+
+" PHP
 "let g:ale_php_phpcs_standard = 'PSR2'
 "let g:ale_open_list = 1
 "let g:ale_set_quickfix = 1
