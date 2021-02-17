@@ -17,8 +17,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'leafgarland/typescript-vim'
 
 " Elm
-Plug 'antew/vim-elm-language-server'
-Plug 'antew/vim-elm-analyse'
+"Plug 'antew/vim-elm-language-server'
+"Plug 'antew/vim-elm-analyse'
 
 " === Utility ===
 " Git
@@ -28,6 +28,7 @@ Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
+Plug 'nikvdp/ejs-syntax'
 "Plug 'mattn/webapi-vim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rking/ag.vim'
@@ -121,10 +122,11 @@ set wildmenu
 """""""""""""""""""""""
 " UI
 """"""""""""""""""""""
-set termguicolors
+"set termguicolors
 set background=dark
+"set t_Co=256
 "colorscheme dracula
-colorscheme nord
+colorscheme dracula
 "colorscheme snazzy
 let g:molokai_original = 1
 set guifont=Consolas:h9
@@ -170,12 +172,15 @@ let g:airline_powerline_fonts = 1
 "let g:syntastic_php_phpcs_args='--standard=Security -n'
 
 "=== ALE
-let g:ale_lint_on_save = 1
+"let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
 
 " Javascript
-let g:ale_linters = { 'javascript': ['standard'], }
-let g:ale_fixers = { 'javascript': ['standard'], }
+let g:ale_linters = { 'javascript': ['eslint'], }
+let g:ale_fixers = { 'javascript': ['eslint'], }
 
 " PHP
 "let g:ale_php_phpcs_standard = 'PSR2'
