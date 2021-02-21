@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
 
 " === Language ===
 Plug 'sheerun/vim-polyglot'
+Plug 'posva/vim-vue'
 
 " Typescript
 Plug 'leafgarland/typescript-vim'
@@ -29,8 +30,6 @@ Plug 'junegunn/fzf'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'nikvdp/ejs-syntax'
-"Plug 'mattn/webapi-vim'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
