@@ -37,6 +37,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ekalinin/Dockerfile.vim'
 
 " === Color scheme ===
 Plug 'tomasr/molokai'
@@ -171,7 +172,7 @@ let g:airline_powerline_fonts = 1
 "let g:syntastic_php_phpcs_args='--standard=Security -n'
 
 "=== ALE
-"let g:ale_lint_on_save = 1
+let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
