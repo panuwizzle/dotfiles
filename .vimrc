@@ -64,17 +64,18 @@ set si
 syntax enable
 let mapleader = ","
 set encoding=utf-8
-set clipboard=unnamed
+"set clipboard=unnamed
 
 "=== Copy to X CLIPBOARD ===
-map <leader>cp :w !xsel -i -p<CR>
-map <leader>cs :w !xsel -i -s<CR>
-map <leader>cb :w !xsel -i -b<CR>
+"map <leader>cp :w !xsel -i -p<CR>
+"map <leader>cs :w !xsel -i -s<CR>
+"map <leader>cb :w !xsel -i -b<CR>
 " Paste from X CLIPBOARD
-map <leader>pp :r!xsel -p<CR>
-map <leader>ps :r!xsel -s<CR>
-map <leader>pb :r!xsel -b<CR>
+"map <leader>pp :r!xsel -p<CR>
+"map <leader>ps :r!xsel -s<CR>
+"map <leader>pb :r!xsel -b<CR>
 
+" https://vi.stackexchange.com/questions/84/how-can-i-copy-text-to-the-system-clipboard-from-vim
 " copy&paste with vim-gtk
 noremap <Leader>y "*y
 noremap <Leader>p "*p
