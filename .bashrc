@@ -45,6 +45,10 @@ esac
 # should be on the output of commands, not on the prompt
 #force_color_prompt=yes
 
+# Git status
+# https://github.com/romkatv/gitstatus
+source ~/gitstatus/gitstatus.prompt.sh
+
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
@@ -56,21 +60,10 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-__kube_ps1()
-{
-    CONTEXT=$(kubectl config current-context)
-    if [ -n "$CONTEXT" ]; then
-        echo "☸ ${CONTEXT}"
-    fi
-}
-
-. ~/git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\] $(__kube_ps1) \w$(__git_ps1 " (%s)")\[\033[00m\]\n\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] ${GITSTATUS_PROMPT}\n\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\n\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -116,6 +109,15 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# bash profile has kube
+#if [ -f ~/.bash_profile ]; then
+#    . ~/.bash_profile
+#fi
+
+# Kubectl shell completion
+source '/home/moo/.kube/completion.bash.inc'
+source '/home/moo/.kind-completion'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -127,8 +129,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
+#if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+#    GIT_PROMPT_ONLY_IN_REPO=1
+#    source $HOME/.bash-git-prompt/gitprompt.sh
+#fi
+export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-source <(kubectl completion bash)
 
