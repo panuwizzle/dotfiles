@@ -6,7 +6,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 set nocompatible
-filetype off
+"filetype off
 
 call plug#begin('~/.vim/plugged')
 
@@ -16,10 +16,6 @@ Plug 'posva/vim-vue'
 
 " Typescript
 Plug 'leafgarland/typescript-vim'
-
-" Elm
-"Plug 'antew/vim-elm-language-server'
-"Plug 'antew/vim-elm-analyse'
 
 " === Utility ===
 " Git
@@ -40,10 +36,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ekalinin/Dockerfile.vim'
 
 " === Color scheme ===
-Plug 'tomasr/molokai'
-Plug 'connorholyday/vim-snazzy'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
