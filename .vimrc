@@ -173,8 +173,16 @@ let g:ale_sign_warning = '⚠️'
 
 
 " Javascript
-let g:ale_linters = { 'javascript': ['eslint'], }
-let g:ale_fixers = { 'javascript': ['eslint'], }
+let g:ale_linters = { 'javascript': ['eslint'], 'typescript': ['eslint'] }
+let g:ale_fixers = { 'javascript': ['eslint'], 'typescript': ['eslint'] }
+let g:ale_lint_delay = 500
+let g:ale_pattern_options = { '.*node_modules.*$': {'ale_enabled': 0}, '.*dist.*$': {'ale_enabled': 0}, '.*-config.js$': {'ale_enabled': 0} }
+let g:ale_set_signs = 1
+let g:ale_set_highlights = 1
+
+" Typescript
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
 
 " PHP
 "let g:ale_php_phpcs_standard = 'PSR2'
