@@ -81,18 +81,18 @@ map <leader>z :FZF .<CR>
 "'''''''''
 " Tagbar
 "'''''''
-let g:tagbar_type_elm = {
-      \ 'kinds' : [
-      \ 'f:function:0:0',
-      \ 'm:modules:0:0',
-      \ 'i:imports:1:0',
-      \ 't:types:1:0',
-      \ 'a:type aliases:0:0',
-      \ 'c:type constructors:0:0',
-      \ 'p:ports:0:0',
-      \ 's:functions:0:0',
-      \ ]
-      \}
+"let g:tagbar_type_elm = {
+"      \ 'kinds' : [
+"      \ 'f:function:0:0',
+"      \ 'm:modules:0:0',
+"      \ 'i:imports:1:0',
+"      \ 't:types:1:0',
+"      \ 'a:type aliases:0:0',
+"      \ 'c:type constructors:0:0',
+"      \ 'p:ports:0:0',
+"      \ 's:functions:0:0',
+"      \ ]
+"      \}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -173,14 +173,15 @@ let g:ale_sign_warning = '⚠️'
 
 
 " Javascript
-let g:ale_linters = { 'javascript': ['eslint'], 'typescript': ['eslint'] }
-let g:ale_fixers = { 'javascript': ['eslint'], 'typescript': ['eslint'] }
+let g:ale_linters = { 'javascript': ['eslint'], 'typescript': ['tsserver'] }
+let g:ale_fixers = { 'javascript': ['eslint'], 'typescript': ['prettier'] }
 let g:ale_lint_delay = 500
 let g:ale_pattern_options = { '.*node_modules.*$': {'ale_enabled': 0}, '.*dist.*$': {'ale_enabled': 0}, '.*-config.js$': {'ale_enabled': 0} }
 let g:ale_set_signs = 1
 let g:ale_set_highlights = 1
 
 " Typescript
+let g:ale_typescript_tsserver_use_global = 1
 let g:typescript_compiler_binary = 'tsc'
 let g:typescript_compiler_options = ''
 
@@ -239,3 +240,5 @@ let g:user_emmet_settings = {'javascript.jsx' : {'extends' : 'jsx'}}
 "  let g:ackprg = 'ag --nogroup --nocolor --column'
 "endif
 
+" auto-command example to apply prettier with gggqG
+"autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
